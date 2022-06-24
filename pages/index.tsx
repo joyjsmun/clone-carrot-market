@@ -3,9 +3,33 @@ import type { NextPage } from "next"
 
 const Home: NextPage = () => {
   return (
-   <div className="bg-red-500">
-     <h1 className="text-green-500">It works</h1>
-   </div>
+    <div className="bg-blue-300 py-20 px-10 flex flex-col gap-10">
+      <div className="bg-white p-6 rounded-2xl shadow-xl">
+          <span className="font-semibold text-3xl">Select Item</span>
+          <div className="flex justify-between my-2">
+            <span className="text-gray-500">Grey Chair</span>
+            <span className="font-semibold">$19</span>
+          </div>
+          <div className="flex justify-between my-2">
+            <span className="text-gray-500">Grey Chair</span>
+            <span className="font-semibold">$19</span>
+          </div>
+          <div className="flex justify-between mt-2 pt-2 border-t-2 border-dashed">
+            <span>Total</span>
+            <span className="font-semibold">$100</span>
+          </div>
+          <div className="mt-5 bg-blue-500 text-white p-3 rounded-3xl text-center w-2/4 mx-auto">Check Out</div>
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-xl">
+
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-xl">
+
+      </div>
+      <div className="bg-white p-6 rounded-2xl shadow-xl">
+
+      </div>
+    </div>
   )
 }
 
