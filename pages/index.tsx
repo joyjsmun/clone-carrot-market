@@ -3,8 +3,8 @@ import type { NextPage } from "next"
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-blue-300 py-20 px-20 flex flex-col gap-10 min-h-screen">
-      <div className="bg-white p-6 rounded-2xl shadow-xl">
+    <div className="bg-blue-300 py-20 px-20 flex flex-col gap-10 min-h-screen md:grid grid-cols-3 lg:grid grid-cols-4" >
+      <div className="bg-white p-6 rounded-2xl shadow-xl  sm:bg-amber-300 md:bg-indigo-400 ">
           <span className="font-semibold text-3xl">Select Item</span>
           <div className="flex justify-between my-2">
             <span className="text-gray-500">Grey Chair</span>
@@ -18,10 +18,10 @@ const Home: NextPage = () => {
             <span>Total</span>
             <span className="font-semibold">$100</span>
           </div>
-          <div className="mt-5 bg-blue-500 text-white p-3 rounded-3xl text-center w-2/4 mx-auto">Check Out</div>
+          <button className="mt-5 bg-blue-500 text-white p-3 rounded-3xl text-center w-2/4 mx-auto hover:bg-teal-500 active:bg-red-800">Check Out</button>
       </div>
 
-      <div className="bg-white overflow-hidden rounded-2xl shadow-xl">
+      <div className="bg-white overflow-hidden rounded-2xl shadow-xl group">
           <div className="bg-blue-500 p-6 pb-14">
             <span className="text-white text-2xl">Profile</span>
           </div>
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                 <span className="text-xs text-gray-600">Orders</span>
                 <span className="font-medium">340</span>
               </div>
-              <div className="h-24 w-24 bg-red-400 rounded-full" />
+              <div className="h-24 w-24 bg-red-400 rounded-full group-hover:bg-teal-500 transition-colors" />
               <div className="flex flex-col items-center">
                 <span className="text-xs text-gray-600">Spent</span>
                 <span className="font-medium">$310</span>
@@ -55,13 +55,14 @@ const Home: NextPage = () => {
         </div>
         <div className="bg-zinc-400 h-72 mb-5" />
         <div className="flex flex-col">
-          <span className="font-medium text-lg">Moon</span>
+          <span className="font-medium text-lg selection:bg-pink-200">Moon</span>
           <span className="font-xs text-gray-600" >Chair</span>
          <div className="mt-3 mb-5 flex justify-between items-center">
-            <div>
-              <input type="radio" />
-              <input type="radio" />
-              <input type="radio" />
+            <div className="space-x-2">
+              <button className="w-5 h-5 rounded-full bg-yellow-500 focus:ring-2 ring-offset-2 ring-yellow-500 transition" />
+              <button className="w-5 h-5 rounded-full bg-indigo-500 focus:ring-2 ring-offset-2 ring-indigo-500 transition" />
+              <button className="w-5 h-5 rounded-full bg-teal-500 focus:ring-2 ring-offset-2 ring-teal-500 transition" />
+
             </div>
             <div className="flex items-center space-x-5">
               <button className=" bg-blue-200 items-center rounded-lg aspect-square w-8 font-medium text-xl text-gray-600">+</button>
