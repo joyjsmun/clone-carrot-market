@@ -3,12 +3,12 @@ import type { NextPage } from "next"
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-blue-300 py-20 px-20 flex flex-col gap-10 min-h-screen md:grid grid-cols-3 lg:grid grid-cols-4" >
-      <div className="bg-white p-6 rounded-2xl shadow-xl  sm:bg-amber-300 md:bg-indigo-400 ">
+    <div className="bg-blue-300 py-20 px-20 flex flex-col gap-10 min-h-screen md:grid grid-cols-2 lg:grid grid-cols-4" >
+      <div className="bg-white p-6 rounded-2xl shadow-xl  sm:bg-amber-300 md:bg-indigo-400 md:hover:bg-pink-400 transition-colors ">
           <span className="font-semibold text-3xl">Select Item</span>
           <div className="flex justify-between my-2">
             <span className="text-gray-500">Grey Chair</span>
-            <span className="font-semibold">$19</span>
+            <span className="font-semibold text-[100px] text-[#410]">$19</span>
           </div>
           <div className="flex justify-between my-2">
             <span className="text-gray-500">Grey Chair</span>
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
       </div>
 
 
-      <div className="bg-white p-6 rounded-2xl shadow-xl">
+      <div className="bg-white p-6 rounded-2xl shadow-xl md:col-span-2 lg:col-span-1 landscape:bg-rose-300">
         <div className="flex mb-5 justify-between items-center">
           <span>⬅</span>
           <div className="space-x-3">
