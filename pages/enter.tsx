@@ -6,15 +6,15 @@ export default function Enter(){
     const onPhoneClick = () => setMethod("phone");
 
     return(
-        <div>
-            <h3>Enter to Carrot</h3>
+        <div className="mt-16 px-4">
+            <h3 className="font-bold text-2xl text-center ">Enter to Carrot</h3>
             <div>
-                <div>
-                    <h5>Enter Using:</h5>
+                <div className="my-10">
+                    <h5 className="text-gray-500 text-sm text-center">Enter Using:</h5>
                 </div>
-                <div>
-                    <button onClick={onEmailClick}>Email</button>
-                    <button onClick={onPhoneClick}>Phone</button>
+                <div className="flex justify-around w-full">
+                    <button className="font-bold border-b-2 w-full border-orange-400" onClick={onEmailClick}>Email</button>
+                    <button className="font-bold border-b-2 w-full" onClick={onPhoneClick}>Phone</button>
                 </div>
             </div>
             <form>
