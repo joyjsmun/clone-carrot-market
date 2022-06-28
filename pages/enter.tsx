@@ -8,13 +8,13 @@ export default function Enter(){
     return(
         <div className="mt-16 px-4">
             <h3 className="font-bold text-2xl text-center ">Enter to Carrot</h3>
-            <div>
+            <div className="flex flex-col items-center">
                 <div className="my-10">
-                    <h5 className="text-gray-500 text-sm text-center">Enter Using:</h5>
+                    <h5 className="text-gray-500 text-sm">Enter Using:</h5>
                 </div>
-                <div className="flex justify-around w-full">
-                    <button className="font-bold border-b-2 w-full border-orange-400" onClick={onEmailClick}>Email</button>
-                    <button className="font-bold border-b-2 w-full" onClick={onPhoneClick}>Phone</button>
+                <div className="grid grid-cols-2 gap-16 pb-4 align-middle border-b-2 w-full">
+                    <button className={`w-full ${method === "email" ?  "pb-4 border-b-2 border-orange-400 text-orange-400 font-bold" : null}`} onClick={onEmailClick}>Email</button>
+                    <button className={`w-full ${method === "phone" ?  "pb-4 border-b-2  border-orange-400 text-orange-400 font-bold" : null}`} onClick={onPhoneClick}>Phone</button>
                 </div>
             </div>
             <form>
